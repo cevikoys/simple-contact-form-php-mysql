@@ -1,35 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
     <title>Form Kontak</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        form { max-width: 600px; margin: auto; }
+        label { display: block; margin: 10px 0 5px; }
+        input, textarea, select { width: 100%; padding: 8px; margin-bottom: 15px; }
+        input[type="submit"] { background: #007bff; color: white; cursor: pointer; }
+    </style>
 </head>
 <body>
+    <h2 style="text-align:center;">Form Kontak</h2>
+    
     <form action="simpan_kontak.php" method="post">
-        <label for="id">Id</label>
+        <label for="id">ID</label>
         <input type="text" id="id" name="id" required>
-        <br><br>
-        <label for="nama">Nama:</label>
-        <input type="text" id="nama" name="nama" required><br><br>
 
-        <label for="jkel">Jenis Kelamin:</label>
-        <select id="jkel" name="jkel">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="jkel">Jenis Kelamin</label>
+        <select id="jkel" name="jkel" required>
             <option value="Pria">Pria</option>
             <option value="Wanita">Wanita</option>
-        </select><br><br>
+        </select>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-        <label for="alamat">Alamat:</label>
-        <textarea id="alamat" name="alamat" required></textarea><br><br>
+        <label for="alamat">Alamat</label>
+        <textarea id="alamat" name="alamat" rows="3" required></textarea>
 
-        <label for="kota">Kota:</label>
-        <input type="text" id="kota" name="kota" required><br><br>
+        <label for="kota">Kota</label>
+        <input type="text" id="kota" name="kota" required>
 
-        <label for="pesan">Pesan:</label>
-        <textarea id="pesan" name="pesan" required></textarea><br><br>
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="4" required></textarea>
 
-        <input type="submit" value="Kirim">
+        <input type="submit" value="Kirim Data">
     </form>
 </body>
 </html>
